@@ -35,9 +35,18 @@ def read_data():
     print(y1)
     print(y2)
 
+    #Deduct duplicate budget
+    y3 = []
+    i = 0
+    for n in y2:
+        y3.append(n - y1[i])
+        i += 1
+
+    print (y3)
+
     # plot bars in stack manner
     plt.bar(x, y1, color='r')
-    plt.bar(x, y2, bottom=y1, color='b')
+    plt.bar(x, y3, bottom=y1, color='b')
     plt.show()
 
 
